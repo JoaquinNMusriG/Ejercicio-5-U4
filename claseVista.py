@@ -16,7 +16,7 @@ class ListaBoxPacientes(tk.Frame):
         self.listab.insert(index, text)
 
     def borrar(self, index):
-        self.listab.delete(index) 
+        self.listab.delete(index)
 
     def modificar(self, paciente, index):
         self.borrar(index)
@@ -25,6 +25,10 @@ class ListaBoxPacientes(tk.Frame):
     def bind_doble_click(self, callback):
         handler = lambda _: callback(self.listab.curselection()[0])
         self.listab.bind("<Double-Button-1>", handler)
+
+    def buscarPaciente(self, index):
+        resultado = (0 <= index) & (index < self.listab.size())
+        return resultado
 
 class FormularioPacientes(tk.LabelFrame):
     fields = ( "Nombre", "Apellido", "Teléfono", 'Altura', 'Peso')
@@ -164,3 +168,7 @@ class Aplicacion(tk.Tk):
 
     def verContactoEnForm(self, paciente):
         self.form.mostrarEstadoPacienteEnFormulario(paciente)
+
+    def verificarPaciente(self, index):
+        resultado = self.listB.buscarPaciente(index)
+        return resultado

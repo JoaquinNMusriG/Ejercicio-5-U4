@@ -14,16 +14,6 @@
         {
             "__class__": "Paciente",
             "__atributos__": {
-                "nombre": "Maria",
-                "apellido": "Perez",
-                "telefono": "(123)4567893",
-                "altura": 160,
-                "peso": 75.0
-            }
-        },
-        {
-            "__class__": "Paciente",
-            "__atributos__": {
                 "nombre": "Lucia",
                 "apellido": "Gonzalez",
                 "telefono": "(123)9638527",
@@ -39,6 +29,16 @@
                 "telefono": "(123)7894561",
                 "altura": 175,
                 "peso": 50.0
+            }
+        },
+        {
+            "__class__": "Paciente",
+            "__atributos__": {
+                "nombre": "Maria",
+                "apellido": "Perez",
+                "telefono": "(123)4567893",
+                "altura": 160,
+                "peso": 75.0
             }
         }
     ]
